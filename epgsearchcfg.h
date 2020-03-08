@@ -72,7 +72,10 @@ public:
     }
 
     void SetDescription(const char* szD) {
-        if (szD)  strncpy(description, szD, sizeof(description));
+        if (szD) {
+		strncpy(description, szD, sizeof(description)-1);
+		description[sizeof(description)-1]='\0';    // make sure, there is a terminating 0
+	}
     }
     void SetTime(int iT) {
         itime = iT;

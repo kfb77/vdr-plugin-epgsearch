@@ -101,10 +101,36 @@ cBlacklist::~cBlacklist(void)
 
 cBlacklist& cBlacklist::operator= (const cBlacklist &Blacklist)
 {
-    char**   catvaluesTemp = this->catvalues;
-    memcpy(this, &Blacklist, sizeof(*this));
-    this->catvalues = catvaluesTemp;
+//    char**   catvaluesTemp = this->catvalues;
+//    memcpy(this, &Blacklist, sizeof(*this));     // this results in a complier warning with g++ V9, take the long way:
+    this->ID=Blacklist.ID;
+    strncpy(this->search,Blacklist.search,sizeof(Blacklist.search)-1);
+    this->search[sizeof(Blacklist.search)-1]='\0';
+    this->options=Blacklist.options;
+    this->useTime=Blacklist.useTime;
+    this->startTime=Blacklist.startTime;
+    this->stopTime=Blacklist.stopTime;
+    this->useChannel=Blacklist.useChannel;
+    this->channelMin=Blacklist.channelMin;        //copied pointer
+    this->channelMax=Blacklist.channelMax;        //copied pointer
+    this->channelGroup=Blacklist.channelGroup;
+    this->useCase=Blacklist.useCase;
+    this->mode=Blacklist.mode;
+    this->useTitle=Blacklist.useTitle;
+    this->useSubtitle=Blacklist.useSubtitle;
+    this->useDescription=Blacklist.useDescription;
+    this->useDuration=Blacklist.useDuration;
+    this->minDuration=Blacklist.minDuration;
+    this->maxDuration=Blacklist.maxDuration;
+    this->useDayOfWeek=Blacklist.useDayOfWeek;
+    this->DayOfWeek=Blacklist.DayOfWeek;
+    this->useExtEPGInfo=Blacklist.useExtEPGInfo;
+    this->ignoreMissingEPGCats=Blacklist.ignoreMissingEPGCats;
+    this->fuzzyTolerance=Blacklist.fuzzyTolerance;
+    this->isGlobal=Blacklist.isGlobal;
+    this->buffer=Blacklist.buffer;                 //copied pointer
 
+//    this->catvalues = catvaluesTemp;
     cSearchExtCat *SearchExtCat = SearchExtCats.First();
     int index = 0;
     while (SearchExtCat) {
