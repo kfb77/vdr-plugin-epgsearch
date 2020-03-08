@@ -123,7 +123,7 @@ cMenuEPGSearchSetup::cMenuEPGSearchSetup(void)
     FavoritesMenuMode[3] = tr("before 'next'");
 
     MailMethod[0] = "sendmail";
-    MailMethod[1] = "sendEmail.pl";
+    MailMethod[1] = "sendEmail";
 
     Setup();
 }
@@ -868,7 +868,7 @@ void cMenuSetupMailNotification::Set()
     AddHelp(tr("Help$Specify the email address where notifications should be sent to."));
 
     Add(new cMenuEditStraItem(tr("Mail method"), &data->mailViaScript, 2, MailMethod));
-    AddHelp(tr("Help$Specify here the method to use when sending mails.\nYou can choose between\n - 'sendmail': requires a properly configured email system\n - 'SendEmail.pl': simple script for mail delivery"));
+    AddHelp(tr("Help$Specify here the method to use when sending mails.\nYou can choose between\n - 'sendmail': requires a properly configured email system\n - 'SendEmail': simple script for mail delivery"));
 
     if (data->mailViaScript) {
         cOsdItem* sep = new cOsdItem(tr("--- Email account ---"));

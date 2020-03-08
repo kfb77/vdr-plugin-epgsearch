@@ -40,7 +40,7 @@ The project's page is at http://winni.vdr-developer.org/epgsearch
 extern bool isUTF8;
 using namespace std;
 
-string cMailNotifier::MailCmd = "sendEmail.pl";
+string cMailNotifier::MailCmd = "sendEmail";
 
 // ----------------------
 // cMailTimerNotification
@@ -247,7 +247,7 @@ bool cMailNotifier::ExecuteMailScript(string ScriptArgs)
 {
     string mailCmd = MailCmd;
     LogFile.Log(3, "starting mail script: %s with parameters: %s", mailCmd.c_str(), ScriptArgs.c_str());
-    if (mailCmd == "sendEmail.pl") // beautify output for standard script
+    if (mailCmd == "sendEmail") // beautify output for standard script
         ScriptArgs += " | cut -d\" \" -f 6-";
 
     cCommand cmd;
