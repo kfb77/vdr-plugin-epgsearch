@@ -561,11 +561,8 @@ msgid ""
 "Help$Specify here the method to use when sending mails.\n"
 "You can choose between\n"
 " - 'sendmail': requires a properly configured email system\n"
-" - 'SendEmail.pl': simple script for mail delivery"
+" - 'SendEmail': simple script for mail delivery"
 msgstr ""
-"Bitte hier die gewünschte Methode zum Emailversand auswählen. Verfügbar sind:\n"
-" - 'sendmail': erfordert ein korrekt konfiguriertes Mailsystem\n"
-" - 'SendEmail.pl': ein einfaches Skript zum Mailversand"
 
 msgid "--- Email account ---"
 msgstr "--- Email-Konto ---"
@@ -1310,26 +1307,3 @@ msgstr "Umschalten zu (%d) '%s'?"
 msgid "Programming timer failed!"
 msgstr "Timer-Programmierung fehlschlagen!"
 
-#~ msgid "Help$Specify here the allowed reception errors before a recording is marked incomplete"
-#~ msgstr "Erlaubte Aufnahmefehler bevor eine Aufnahme als unvollständig betrachtet wird"
-
-#~ msgid "if present"
-#~ msgstr "wenn vorhanden"
-
-#~ msgid "Help$This value delays starting the initial searchtimer update thread for the given range of seconds"
-#~ msgstr "Dieser Wert verzögert das erste Starten des Suchtimerthreads um die angegebenen Sekunden"
-
-#~ msgid "Epgsearch: recursive TIMERS LOCK"
-#~ msgstr "Epgsearch: Rekursiver TIMER Lock"
-
-#~ msgid "Epgsearch: Recursive LOCK DeleteTimer failed"
-#~ msgstr "Epgsearch: Rekursiver LOCK Problem beim Löschen eines Timers"
-
-#~ msgid "in %02ldd"
-#~ msgstr "in %02ldd"
-
-#~ msgid "in %02ldh"
-#~ msgstr "in %02ldh"
-
-#~ msgid "in %02ldm"
-#~ msgstr "in %02ldm"
